@@ -1,0 +1,21 @@
+name: 'Update Notion with Anthropic'
+description: 'Update a Notion page with Anthropic-generated content based on code files'
+inputs:
+  codePath:
+    description: 'Path to code files (glob pattern)'
+    required: true
+  anthropicApiKey:
+    description: 'Anthropic API Key'
+    required: true
+  notionApiKey:
+    description: 'Notion API Key'
+    required: true
+  notionPageId:
+    description: 'Notion page ID'
+    required: true
+  prompt:
+    description: 'Prompt for Anthropic API'
+    required: true
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
